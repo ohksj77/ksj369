@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  ksj1:
+    build:
+      context: ./samyookgoo1
+    ports:
+      - 5001:5001
+    container_name: ksj1
+    networks:
+    - network-369
+    tty: true
+
+  ksj2:
+    build:
+      context: ./samyookgoo2
+    ports:
+      - 5002:5002
+    container_name: ksj2
+    networks:
+    - network-369
+    tty: true
+
+  ksj3:
+    build:
+      context: ./samyookgoo3
+    ports:
+      - 5003:5003
+    container_name: ksj3
+    networks:
+    - network-369
+    tty: true
+
+  ksj4:
+    build:
+      context: ./samyookgoo4
+    ports:
+      - 5004:5004
+    container_name: ksj4
+    networks:
+    - network-369
+    tty: true
+
+networks:
+  network-369:
+    driver: bridge
